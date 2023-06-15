@@ -1,76 +1,45 @@
-
 const express = require('express');
-const debtrout = express.Router();
 const bodyParser = require('body-parser');
 
-// Middleware to parse JSON bodies
+const debtrout = express.Router();
 debtrout.use(bodyParser.json());
+debtrout.use(bodyParser.urlencoded({ extended: true }));
 
-// API endpoint for debt calculation
-debtrout.post('/calculateDebts', (req, res) => {
-  const debts = req.body.debts;
+debtrout.post('/calculate', (req, res) => {
+  const data = req.body;
 
-  if (!Array.isArray(debts)) {
-    return res.status(400).json({ error: 'Invalid input' });
-  }
-
-  let totalInterest = 0;
+  const debts = data.debts;
   let totalPrincipal = 0;
+  let totalInterest = 0;
+  let totalPaid = 0;
+  let monthsUntilDebtFree = 0;
 
   debts.forEach((debt) => {
-    const principal = parseFloat(debt.principal);
-    const interestRate = parseFloat(debt.interestRate) / 100; // Convert interest rate to decimal
-    const monthlyPayment = parseFloat(debt.monthlyPayment);
-    const debtName = debt.debtName;
+    const { principal, interestRate, monthlyPayment } = debt;
 
-    if (isNaN(principal) || isNaN(interestRate) || isNaN(monthlyPayment) || !debtName) {
-      return res.status(400).json({ error: 'Invalid input' });
-    }
-
-    let remainingDebt = principal;
-    let interest = 0;
-    let months = 0;
-
-    while (remainingDebt > 0) {
-      interest = remainingDebt * (interestRate / 12);
-      const totalPayment = monthlyPayment + interest;
-      remainingDebt -= totalPayment;
-      months++;
-    }
-
-    const currentDebtInterest = interest.toFixed(2);
-    totalInterest += parseFloat(currentDebtInterest);
     totalPrincipal += principal;
+    const monthlyInterest = (principal * interestRate) / 100;
+    totalInterest += monthlyInterest;
+
+    const monthsToPayOff = Math.ceil(principal / monthlyPayment);
+    monthsUntilDebtFree = Math.max(monthsUntilDebtFree, monthsToPayOff);
   });
 
-  const percentagePaidInInterest = ((totalInterest / totalPrincipal) * 100).toFixed(2);
-  const monthsToDebtFree = Math.ceil(totalPrincipal / req.body.monthlyPayment);
+  const percentagePaidInInterest = ((totalInterest / totalPrincipal) * 100).toFixed(1) + "%";
 
-  const currentMonth = new Date().getMonth();
-  const currentYear = new Date().getFullYear();
-
-  let debtFreeYear = currentYear + Math.floor((currentMonth + monthsToDebtFree) / 12);
-  let debtFreeMonth = (currentMonth + monthsToDebtFree) % 12;
-  if (debtFreeMonth === 0) {
-    debtFreeMonth = 12; // December
-    debtFreeYear -= 1;
-  }
-
-  const monthNames = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-  ];
-  const debtFreeDateFormatted = `${monthNames[debtFreeMonth - 1]} ${debtFreeYear}`;
+  const currentDate = new Date();
+  const debtFreeDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + monthsUntilDebtFree, currentDate.getDate());
+  const formattedDebtFreeDate = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' }).format(debtFreeDate);
 
   const response = {
-    totalPrincipal: totalPrincipal.toFixed(2),
-    totalInterest: totalInterest.toFixed(2),
+    totalPrincipal,
+    totalInterest,
     percentagePaidInInterest,
-    monthsToDebtFree,
-    debtFreeDate: debtFreeDateFormatted
+    monthsUntilDebtFree,
+    debtFreeDate: formattedDebtFreeDate
   };
 
-  res.send(response);
+  res.json(response);
 });
 
 module.exports={debtrout} 
-
