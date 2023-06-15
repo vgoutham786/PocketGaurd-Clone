@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  .row{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+  }
+  
+  .column {
+  
+    /* border: 0px; */
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    
+  }
+  
+  @media screen and (max-width: 850px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    border: 0px;
+  }
+  
+  .container {
+    margin-top: 13%;
+    /* padding: 0 16px; */
+  }
+  .container>h5{
+   font-weight: bold;
+  }
+  .container>p{
+    font-size:larger;
+   }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .icon1{
+    margin: auto;
+    width: 18%;
+  }
+  .icon3{
+    margin: auto;
+    width: 15%;
+  }
+  .icon4{
+    margin: auto;
+    width: 20%;
+  }
+  
+  
+  /* .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  } */
+  
+  /* .button:hover {
+    background-color: #555;
+  } */

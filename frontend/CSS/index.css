@@ -1,0 +1,139 @@
+.Take_full_control{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.button_box{
+    /* border: 1px solid red; */
+    width: 50%;
+}
+.take_full_h1_tag{
+    margin-top: 15%;
+    /* border: 1px solid red; */
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    font-size:6dvh
+}
+.take_full_p_tag{
+    margin-top: 2%;
+    /* border: 1px solid red; */
+    width: 75%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+}
+.take_full_button{
+    background-color: #24E0A4;
+    padding: 13px 27px;
+    /* border: 1px solid red; */
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    
+    
+}
+.signup_btn1{
+    display: block;
+    margin-left: 12%;
+
+}
+.mobile_image{
+    margin-left: 15%; 
+    width: 50%;
+
+}
+.mobile_image>img{
+
+    width: 470px;
+    /* border: 1px solid red; */
+  
+}
+.scane_to_p{
+    text-align: center;
+    
+}
+.scanToinstall{
+    margin-top: 7%;
+    display: flex;
+
+    width: 70%;
+    margin-left: 10%;
+}
+.app_appStore1{
+   width: 180px; 
+}
+.app_playStore1{
+    width: 180px; 
+    margin-top: 10%;
+ }
+ .app_Barcode_Store1{
+    width: 140px; 
+    margin-left: 50%;
+ }
+ .image_ss>img{
+    width: 100%;
+    /* border: 1px solid red; */
+ }
+ .personal_finance_h3{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+ }
+ .personal_finance_p{
+    text-align: center;
+    font-size: 25px;
+ }
+ .video_section{
+    margin: auto;
+    margin-top: 6%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+ }
+ .h1_and_p_tag{
+    margin-top:auto ;
+    margin-bottom: auto;
+ }
+ .Know_whath1{
+    font-weight: bolder;
+ }
+ .Know_whatp{
+    font-size: larger;
+ }
+ .signup_btn2{
+    background-color: #24E0A4;
+    padding: 12px 27px;
+    border: 0px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+ }
+ .pocketGuard_free{
+    /* border: 1px solid red; */
+    margin-top: auto;
+    margin-bottom: auto;
+ }
+ 
+ .GetpocketGuardh1{
+    font-weight: 700;
+    margin-top: 10%;
+    text-align: center;
+ }
+ .GetpocketGuard_p{
+    text-align: center;
+    font-size: 22px;
+ }
+ .GetpocketGuard_button{
+    display: block;
+    margin: auto;
+    background-color: #24E0A4;
+    padding: 12px 27px;
+    border: 0px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+ }
