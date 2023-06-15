@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgetbooster</title>
+    <link rel="stylesheet" href="./frontend/styles/budgetcalculator.css">
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="topdiv">
+        <div>
+            <h2>Budget Calculator</h2>
+            <p>Try out the PocketGuard personal monthly budget calculator. Customize your budget the way you want. Let
+                us crunch numbers and show how much you can save or allocate for debt payments.</p>
+            <a href=""><button id="gr">Signup for Budgetboost</button></a>
+            <a href=""><button id="tr">Try out Calculator</button></a>
+        </div>
+        <div>
+            <img src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/poster/pic-calculator-budget@2x.png"
+                alt="">
+        </div>
+    </div>
+
+    <div id="middle">
+        <div id="divide">
+            <div>
+                <h3>Estimated income: $<span class="estinc"></span></h3>
+                <h5>Enter you take home pay</h5>
+                <input type="number" placeholder="$0" min="1" max="20000">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange">
+                </div>
+            </div>
+            <div>
+                <h3>Bills and Utilities: $<span class="estinc"></span></h3>
+                <p>Enter all your recurring expenses on a monthly basis.</p>
+                <div class="split">
+                    <p>Rent</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Insurance</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Property Tax</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Electricity</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Gas</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Water</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Internet serviece </p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Cell phone</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Subscription</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Other</p>
+                    <span>$ <input type="number"></span>
+                </div>
+            </div>
+            <div>
+                <h3>Category Budgets: $<span class="estinc"></span></h3>
+                <p>Allocate enough money to spend your monthly budgets</p>
+                <div class="split">
+                    <p>Home</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Groceries</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Auto & Transport</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Eating out</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Entertainment</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Health & medical</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Personal care</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Gift Donation</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>clothing</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Education</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Electronic & Software</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Insurance</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Kids</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Pet</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Shopping </p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Sports & Fitness </p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Travel </p>
+                    <span>$ <input type="number"></span>
+                </div>
+            </div>
+            <div>
+                <h3>Debts: $<span class="estinc"></span></h3>
+                <p>Enter minimum amount of money you need to pay every month</p>
+                <div class="split">
+                    <p>Credit Card</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Loan</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Mortrage</p>
+                    <span>$ <input type="number"></span>
+                </div>
+                <div class="split">
+                    <p>Insurance</p>
+                    <span>$ <input type="number"></span>
+                </div>
+
+            </div>
+            <div>
+                <h3>Savings: $<span class="estinc"></span></h3>
+                <h5>Enter the amount of money you’d like to contribute towards your savings goals.</h5>
+                <input type="number" placeholder="$0" min="1" max="20000">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>
+        <div id="pie">
+            <h2>In my pocket</h2>
+            <p>Monthly Budget Breakdown</p>
+            <div>
+
+            </div>
+            <div>
+                <div class="split">
+                    <p>Total monthly expenses</p>
+                    <span>$</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
