@@ -9,6 +9,7 @@ body {
     display: flex;
     width: 60%;
     margin: auto;
+    margin-top: 3%;
     background-color: #e3ebf0;
     padding: 2% 3%;
     justify-content: space-around;
@@ -25,7 +26,7 @@ body {
 
 #topdiv button {
     padding: 3%;
-    margin: 30px;
+    margin: 20px;
     font-size: 16px;
     border-radius: 6px;
     font-weight: 600;
