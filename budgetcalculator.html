@@ -6,16 +6,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgetbooster</title>
     <link rel="stylesheet" href="./frontend/styles/budgetcalculator.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./frontend/CSS/style.css">
+    <link rel="stylesheet" href="./frontend/CSS/index.css">
+    <link rel="stylesheet" href="./frontend/CSS/guide.css">
 </head>
 
 <body>
     <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+
+        <a class="navbar-brand" href="#"><img class="logo_img" src="./frontend/CSS/logo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle text-dark font-weight-bold" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Features
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="container_futter">
+                            <div class="row">
+                                <div class="col-md-4" id="border_red">
+                                    <!-- <span class=" text-dark">Websites</span> -->
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark active" id="a_fix" href="#">bill payment
+                                                tracker</a>
+                                            <a class="nav-link text-dark " id="font_size" id="a_fix" href="#">Lower your
+                                                bills</a>
+                                            <a class="nav-link text-dark" id="font_size" id="a_fix"
+                                                href="#">Budgeting</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Free antifraud</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Insights</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Debt payoff plan</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Alerts</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Budget
+                                                categorization</a>
+                                            <a class="nav-link text-dark" id="font_size" href="#">Saving goles</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle text-dark font-weight-bold" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        How it works
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="container_futter" id="border_red">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <!-- <span class=" text-dark">Websites</span> -->
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark active" id="a_fix" href="#">What is
+                                                PocketGuard</a>
+
+
+                                            <a class="nav-link text-dark" href="#" id="a_fix">How to get started
+                                                right</a>
+
+
+                                            <a class="nav-link text-dark" href="#" id="a_fix">Find Saving</a>
+
+                                            <a class="nav-link text-dark" href="#" id="a_fix">Security</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle text-dark font-weight-bold" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Calculators
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="container_futter">
+                            <div class="row">
+                                <div class="col-md-4" id="border_red">
+                                    <!-- <span class=" text-dark">Websites</span> -->
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark active" href="#" id="a_fix">Budget
+                                                Calculator</a>
+
+
+                                            <a class="nav-link text-dark" href="#">Debt payoff Calculator</a>
+
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle text-dark font-weight-bold" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Education
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="container_futter">
+                            <div class="row">
+                                <div class="col-md-4" id="border_red">
+                                    <!-- <span class=" text-dark">Websites</span> -->
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark active" href="#" id="a_fix">PocketGuard</a>
+
+
+                                            <a class="nav-link text-dark" href="#" id="a_fix">Money management Short
+                                                course</a>
+                                        </li>
+                                        <!-- <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">xyz.com</a>
+                      </li> -->
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark  text-dark font-weight-bold" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pricing
+                    </a>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle text-dark font-weight-bold" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        For Business
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="container_futter">
+                            <div class="row">
+                                <div class="col-md-4" id="border_red">
+                                    <!-- <span class=" text-dark">Websites</span> -->
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark active text-dark" href="#" id="a_fix">For
+                                                financing coaching</a>
+
+
+                                            <a class="nav-link text-dark" href="#">For students and education</a>
+
+
+                                            <a class="nav-link text-dark" href="#">White label</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-dark mr-4 my-sm-0 "
+                    style="padding: 10px 35px; font-weight: bold; border-radius: 8px; " type="submit">Log
+                    in</button>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn btn-outline-dark my-2 my-sm-0"
+                    style="background-color: #24E0A4; padding: 10px 25px; font-weight: bold;border-radius: 8px; border: 0px;"
+                    type="submit">Get
+                    started</button>
+            </form>
+        </div>
+    </nav>
     <div id="topdiv">
         <div>
             <h2>Budget Calculator</h2>
             <p>Try out the PocketGuard personal monthly budget calculator. Customize your budget the way you want. Let
                 us crunch numbers and show how much you can save or allocate for debt payments.</p>
-            <a href=""><button id="gr">Signup for Budgetboost</button></a>
+            <a href=""><button id="gr" >Signup for Budgetboost</button></a>
             <a href=""><button id="tr">Try out Calculator</button></a>
         </div>
         <div>
@@ -23,13 +216,13 @@
                 alt="">
         </div>
     </div>
-
+    <p id="dummy"></p>
     <div id="middle">
         <div id="divide">
             <div>
-                <h3>Estimated income: $<span class="estinc"></span></h3>
+                <h3>Estimated income: $<span class="escinc"></span></h3>
                 <h5>Enter you take home pay</h5>
-                <input type="number" placeholder="$0" min="1" max="20000">
+                <input type="number" placeholder="$0" min="1" max="20000" id="inc">
                 <div class="slidecontainer">
                     <input type="range" min="1" max="20000" value="0" class="slider" id="myRange">
                 </div>
@@ -39,43 +232,43 @@
                 <p>Enter all your recurring expenses on a monthly basis.</p>
                 <div class="split">
                     <p>Rent</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id1"></span>
                 </div>
                 <div class="split">
                     <p>Insurance</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id2"></span>
                 </div>
                 <div class="split">
                     <p>Property Tax</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id3"></span>
                 </div>
                 <div class="split">
                     <p>Electricity</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id4"></span>
                 </div>
                 <div class="split">
                     <p>Gas</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id5"></span>
                 </div>
                 <div class="split">
                     <p>Water</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id6"></span>
                 </div>
                 <div class="split">
                     <p>Internet serviece </p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id7"></span>
                 </div>
                 <div class="split">
                     <p>Cell phone</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id8"></span>
                 </div>
                 <div class="split">
                     <p>Subscription</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id9"></span>
                 </div>
                 <div class="split">
                     <p>Other</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id10"></span>
                 </div>
             </div>
             <div>
@@ -83,71 +276,71 @@
                 <p>Allocate enough money to spend your monthly budgets</p>
                 <div class="split">
                     <p>Home</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id11"></span>
                 </div>
                 <div class="split">
                     <p>Groceries</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id12"></span>
                 </div>
                 <div class="split">
                     <p>Auto & Transport</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id13"></span>
                 </div>
                 <div class="split">
                     <p>Eating out</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id14"></span>
                 </div>
                 <div class="split">
                     <p>Entertainment</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id15"></span>
                 </div>
                 <div class="split">
                     <p>Health & medical</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id16"></span>
                 </div>
                 <div class="split">
                     <p>Personal care</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id17"></span>
                 </div>
                 <div class="split">
                     <p>Gift Donation</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id18"></span>
                 </div>
                 <div class="split">
                     <p>clothing</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id19"></span>
                 </div>
                 <div class="split">
                     <p>Education</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id20"></span>
                 </div>
                 <div class="split">
                     <p>Electronic & Software</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id21"></span>
                 </div>
                 <div class="split">
                     <p>Insurance</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id22"></span>
                 </div>
                 <div class="split">
                     <p>Kids</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id23"></span>
                 </div>
                 <div class="split">
                     <p>Pet</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id24"></span>
                 </div>
                 <div class="split">
                     <p>Shopping </p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id25"></span>
                 </div>
                 <div class="split">
                     <p>Sports & Fitness </p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id26"></span>
                 </div>
                 <div class="split">
                     <p>Travel </p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id27"></span>
                 </div>
             </div>
             <div>
@@ -155,30 +348,31 @@
                 <p>Enter minimum amount of money you need to pay every month</p>
                 <div class="split">
                     <p>Credit Card</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id28"></span>
                 </div>
                 <div class="split">
                     <p>Loan</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id29"></span>
                 </div>
                 <div class="split">
                     <p>Mortrage</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id30"></span>
                 </div>
                 <div class="split">
                     <p>Insurance</p>
-                    <span>$ <input type="number"></span>
+                    <span>$ <input type="number" id="id31"></span>
                 </div>
 
             </div>
             <div>
                 <h3>Savings: $<span class="estinc"></span></h3>
                 <h5>Enter the amount of money you’d like to contribute towards your savings goals.</h5>
-                <input type="number" placeholder="$0" min="1" max="20000">
+                <input type="number" placeholder="$0" id="savings" min="1" max="20000">
                 <div class="slidecontainer">
-                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange">
+                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange1">
                 </div>
             </div>
+            <button id="calc">calculate</button>
         </div>
         <div id="pie">
             <h2>In my pocket</h2>
@@ -197,3 +391,4 @@
 </body>
 
 </html>
+<script src="./frontend/Script/budgetcalc.js"></script>
