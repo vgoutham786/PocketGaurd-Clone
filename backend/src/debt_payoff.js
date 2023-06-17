@@ -1,28 +1,34 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const debtrout = express.Router();
 debtrout.use(bodyParser.json());
 debtrout.use(bodyParser.urlencoded({ extended: true }));
+debtrout.use(cors()); // Add CORS middleware to allow cross-origin requests
 
 debtrout.post('/calculate', (req, res) => {
   const data = req.body;
 
   const debts = data.debts;
+  console.log(debts)
   let totalPrincipal = 0;
   let totalInterest = 0;
   let totalPaid = 0;
   let monthsUntilDebtFree = 0;
+  let minpay = 0;
 
   debts.forEach((debt) => {
     const { principal, interestRate, monthlyPayment } = debt;
 
     totalPrincipal += principal;
-    const monthlyInterest = (principal * interestRate) / 100;
+    minpay += principal;
+    const remainingPrincipal = principal - monthlyPayment;
+    const monthlyInterest = (remainingPrincipal * interestRate) / 100;
     totalInterest += monthlyInterest;
+    totalPaid += monthlyPayment;
 
-    const monthsToPayOff = Math.ceil(principal / monthlyPayment);
-    monthsUntilDebtFree = Math.max(monthsUntilDebtFree, monthsToPayOff);
+    monthsUntilDebtFree = Math.max(monthsUntilDebtFree, Math.ceil(remainingPrincipal / monthlyPayment));
   });
 
   const percentagePaidInInterest = ((totalInterest / totalPrincipal) * 100).toFixed(1) + "%";
@@ -31,15 +37,14 @@ debtrout.post('/calculate', (req, res) => {
   const debtFreeDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + monthsUntilDebtFree, currentDate.getDate());
   const formattedDebtFreeDate = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' }).format(debtFreeDate);
 
-  const response = {
-    totalPrincipal,
+  res.send({
+    totalPrincipal: totalPrincipal + totalInterest,
     totalInterest,
     percentagePaidInInterest,
     monthsUntilDebtFree,
-    debtFreeDate: formattedDebtFreeDate
-  };
-
-  res.json(response);
+    debtFreeDate: formattedDebtFreeDate,
+    minpay
+  });
 });
 
-module.exports={debtrout} 
+module.exports = {debtrout};
