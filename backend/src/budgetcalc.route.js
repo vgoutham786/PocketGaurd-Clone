@@ -42,7 +42,7 @@ bdroute.patch("/", async (req, res) => {
             res.send({ msg: "not found", data: null })
         }
     } catch (error) {
-
+        res.send({ err: error.message })
     }
 
 })
