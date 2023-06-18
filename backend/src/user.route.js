@@ -1,5 +1,5 @@
 const express = require("express");
-const  userModel  = require("../Models/user.model");
+const userModel = require("../Models/user.model");
 const userRoute = express.Router();
 var jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -36,7 +36,7 @@ userRoute.post("/login", async (req, res) => {
             // result == true
             if (result) {
                 var token = jwt.sign({ userID: data._id, user: data.name }, 'eval');
-                res.status(200).send({ msg: "Login successfull", token: token })
+                res.status(200).send({ msg: "Login successfull", token: token, role: data.role })
             } else {
                 res.status(400).send({ msg: "Invalid password" })
             }
@@ -47,5 +47,5 @@ userRoute.post("/login", async (req, res) => {
     }
 })
 
-module.exports = 
+module.exports =
     userRoute
