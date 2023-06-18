@@ -15,4 +15,20 @@ themeToggler.addEventListener("click",()=>{
     themeToggler.querySelector("span:nth-child(1)").classList.toggle("active")
     themeToggler.querySelector("span:nth-child(2)").classList.toggle("active")
 })
-console.log(document.querySelectorAll(".active"))
+// =====================================    =============================================//
+const totalCustomer=document.querySelector("#totalCustomer h1")
+
+
+
+async function display(){
+          try {
+            const data= await fetch("http://localhost:3000/admin")
+                  data=await data.json()
+                  totalCustomer.innerHTML=data.count
+                  console.log(data)
+          } catch (error) {
+               console.log(error)
+          }
+
+}
+display()
