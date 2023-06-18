@@ -15,4 +15,9 @@ themeToggler.addEventListener("click",()=>{
     themeToggler.querySelector("span:nth-child(1)").classList.toggle("active")
     themeToggler.querySelector("span:nth-child(2)").classList.toggle("active")
 })
-console.log(document.querySelectorAll(".active"))
+// =================================================== other functionality=================================///
+const totalCustomer=document.querySelector("#totalCustomer h1")
+ 
+
+
+
