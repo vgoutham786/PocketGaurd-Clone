@@ -47,13 +47,14 @@ function total() {
     let sum = 0;
     let debt = 0
     for (let i = 0; i < 33; i++) {
-        if (i == 0 || i == 32) {
+        if (i == 0) {
             sum += val[i]
         } else {
             sum -= val[i]
             debt += val[i]
         }
     }
+    piechart(+inc.value, 3, 400, 5, +savings.value)
     return sum
 }
 getData()
@@ -63,7 +64,14 @@ async function getData() {
     //let data = val.data;
     let data = null
     if (data) {
-
+        let ans = Objects.values(data);
+        inc.value = ans[0];
+        savings.value = ans[32]
+        for (let i = 1; i <= 31; i++) {
+            document.getElementById(`id${i}`).value = ans[i - 1];
+            //obj[fields[i]] = val[i]
+            //val.push(`id${i}`.value)
+        }
     } else {
         inc.value = 0;
         savings.value = 0;
@@ -73,6 +81,30 @@ async function getData() {
             //val.push(`id${i}`.value)
         }
     }
+    piechart(+inc.value, 3, 400, 5, +savings.value)
+
 }
 
 
+function piechart(i, b, bd, d, s) {
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["In my pocket", "Bills", "Budgets", "Debt", "Savings"],
+            datasets: [{
+                backgroundColor: [
+                    "#2ecc71",
+                    "#3498db",
+                    "#95a5a6",
+                    "#9b59b6",
+                    "#f1c40f",
+                    "#e74c3c",
+                    "#34495e"
+                ],
+                data: [i, b, bd, d, s]
+            }]
+        }
+    });
+
+}

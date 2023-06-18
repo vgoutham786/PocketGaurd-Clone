@@ -92,15 +92,29 @@ body {
 
 .split {
     display: flex;
+    padding: 0 3%;
     align-items: center;
     justify-content: space-between;
     /* width: 20%; */
+    font-size: 18px;
+    font-weight: 600;
 }
 
 #middle {
-    width: 60%;
+    width: 70%;
     margin: auto;
     display: flex;
     border: 1px solid red;
     justify-content: space-between;
+}
+
+#divide>div {
+    background-color: #e3ebf0;
+    padding: 2%;
+}
+
+
+.container {
+    width: 50%;
+    margin: 15px auto;
 }

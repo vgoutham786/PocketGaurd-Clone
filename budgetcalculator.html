@@ -208,7 +208,7 @@
             <h2>Budget Calculator</h2>
             <p>Try out the PocketGuard personal monthly budget calculator. Customize your budget the way you want. Let
                 us crunch numbers and show how much you can save or allocate for debt payments.</p>
-            <a href=""><button id="gr" >Signup for Budgetboost</button></a>
+            <a href=""><button id="gr">Signup for Budgetboost</button></a>
             <a href=""><button id="tr">Try out Calculator</button></a>
         </div>
         <div>
@@ -216,11 +216,11 @@
                 alt="">
         </div>
     </div>
-    <p id="dummy"></p>
+
     <div id="middle">
         <div id="divide">
             <div>
-                <h3>Estimated income: $<span class="escinc"></span></h3>
+                <h3 style="background-color: #24E0A4;">Estimated income: $<span class="escinc"></span></h3>
                 <h5>Enter you take home pay</h5>
                 <input type="number" placeholder="$0" min="1" max="20000" id="inc">
                 <div class="slidecontainer">
@@ -375,6 +375,12 @@
             <button id="calc">calculate</button>
         </div>
         <div id="pie">
+            <div class="container">
+                <h2>Chart.js — Pie Chart Demo (apples)</h2>
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
             <h2>In my pocket</h2>
             <p>Monthly Budget Breakdown</p>
             <div>
@@ -388,7 +394,9 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
 <script src="./frontend/Script/budgetcalc.js"></script>
