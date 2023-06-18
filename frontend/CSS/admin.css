@@ -394,6 +394,11 @@ main .recent-orders a{
     font-weight: 600;
 }
 
+.delete:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
 /* =========Media Queries========================= */
 
 @media screen and (max-width:1200px){
