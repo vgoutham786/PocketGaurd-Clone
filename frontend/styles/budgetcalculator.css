@@ -59,6 +59,9 @@ body {
     border: 1px solid black;
 }
 
+.split input {
+    width: 70%;
+}
 
 .slider {
     -webkit-appearance: none;
@@ -70,6 +73,15 @@ body {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+}
+
+#calc {
+    padding: 1% 2%;
+    border: 0;
+    background-color: #04AA6D;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 100px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -102,9 +114,9 @@ body {
 
 #middle {
     width: 70%;
-    margin: auto;
+    margin: 3% auto;
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: space-between;
 }
 
@@ -117,4 +129,189 @@ body {
 .container {
     width: 50%;
     margin: 15px auto;
+}
+
+
+/* sliding section  */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+
+
+.slider_section {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    margin-top: 100px;
+
+}
+
+.tab_header {
+    width: 100%;
+    height: auto;
+    background-color: #24e0a4;
+    padding: 2.5rem;
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+}
+
+.tab_container {
+    position: relative;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1rem;
+}
+
+.slider_section li {
+    width: 24%;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.8rem 0;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.moving_border {
+    position: absolute;
+    width: 20%;
+    height: 0.15rem;
+    background: rgb(23, 23, 23);
+    bottom: -2%;
+    left: 0;
+    border-radius: 1rem;
+    transition: transform 0.5s cubic-bezier(1, 0.55, 0.565, 1.2);
+}
+
+.slider_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgb(241, 241, 241);
+    overflow: hidden;
+}
+
+.slider_container .moving_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 1.2s cubic-bezier(1, 0.45, 0.565, 1);
+    will-change: transform;
+
+}
+
+.slider_container .slider_item {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    justify-content: space-between;
+
+}
+
+.slider_container .slider_item .content {
+    width: 50%;
+    padding-right: 40px;
+
+}
+
+.slider_container .slider_item .content h1 {
+    margin-bottom: 40px;
+
+}
+
+.slider_container .slider_item .content p {
+    margin-bottom: 40px;
+    line-height: 30px;
+
+}
+
+.slider_container .slider_item .image {
+    width: 40%;
+}
+
+.slider_container .slider_item .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.slider_item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.center_tab_preview {
+    position: absolute;
+    width: 30rem;
+    height: 7rem;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background: rgba(201, 201, 201, 0.23);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.center_tab_preview .text_moving_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 1.3s cubic-bezier(1, 0.45, 0.565, 1);
+    will-change: transform;
+
+}
+
+.center_tab_preview span {
+    width: 100%;
+    min-height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    font-weight: 700;
 }

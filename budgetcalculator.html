@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./frontend/CSS/style.css">
     <link rel="stylesheet" href="./frontend/CSS/index.css">
     <link rel="stylesheet" href="./frontend/CSS/guide.css">
+    <link rel="stylesheet" href="./frontend/CSS/footer.css">
+
 </head>
 
 <body>
@@ -222,9 +224,10 @@
             <div>
                 <h3 style="background-color: #24E0A4;">Estimated income: $<span class="escinc"></span></h3>
                 <h5>Enter you take home pay</h5>
-                <input type="number" placeholder="$0" min="1" max="20000" id="inc">
+                <input type="number" style="width: 50%;" placeholder="$0" min="1" max="20000" id="inc">
                 <div class="slidecontainer">
-                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange">
+                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange"
+                        style="width: 50%; margin-top: 20px;">
                 </div>
             </div>
             <div>
@@ -367,36 +370,266 @@
             <div>
                 <h3>Savings: $<span class="estinc"></span></h3>
                 <h5>Enter the amount of money you’d like to contribute towards your savings goals.</h5>
-                <input type="number" placeholder="$0" id="savings" min="1" max="20000">
+                <input type="number" style="width: 50%;" placeholder="$0" min="1" max="20000" id="savings">
                 <div class="slidecontainer">
-                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange1">
+                    <input type="range" min="1" max="20000" value="0" class="slider" id="myRange1"
+                        style="width: 50%; margin-top: 20px;">
                 </div>
             </div>
             <button id="calc">calculate</button>
         </div>
         <div id="pie">
+            <h2>In my pocket <span class="escinc"></span></h2>
             <div class="container">
-                <h2>Chart.js — Pie Chart Demo (apples)</h2>
+
+
                 <div>
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
-            <h2>In my pocket</h2>
+
             <p>Monthly Budget Breakdown</p>
             <div>
 
             </div>
             <div>
                 <div class="split">
+                    <p>Total monthly income</p>
+                    <span class="escinc">$</span>
+                </div>
+                <div class="split">
                     <p>Total monthly expenses</p>
-                    <span>$</span>
+                    <span id="mexp">$</span>
+                </div>
+                <div class="split">
+                    <p>Total monthly savings</p>
+                    <span id="sav">$</span>
+                </div>
+                <div class="split">
+                    <p>In my pocket</p>
+                    <span id="bal">$</span>
                 </div>
             </div>
         </div>
     </div>
+    <section class="slider_section">
+        <h1>How to use calculator step by step</h1>
+        <div class="tab_header">
+            <ul class="tab_container">
+                <li class="tab_item">Step 1</li>
+                <li class="tab_item">Step 2</li>
+                <li class="tab_item">Step 3</li>
+                <li class="tab_item">Step 4</li>
+                <li class="tab_item">Step 5</li>
 
+                <div class="moving_border" id="border"></div>
+            </ul>
+        </div>
+
+        <div class="slider_container">
+            <div class="moving_container" id="moving_container">
+                <div class="slider_item">
+                    <div class="content">
+                        <h1>Enter your estimated income</h1>
+                        <p>This section of the budget calculator covers take-home pay, including your main source of
+                            income and any supplementary sources of cash flow that is disposed of each month. This could
+                            be a paycheck, tips, child support payments, Social Security income, etc. Don’t forget
+                            household income if you’re budgeting for a family.</p>
+                    </div>
+                    <div class="image"><img
+                            src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator/steps-block/1/pic-features-1@2x.png"
+                            alt=""></div>
+                </div>
+                <div class="slider_item">
+                    <div class="content">
+                        <h1>Enter your monthly bills</h1>
+                        <p>Let’s take a look at your average monthly recurring expenses, including fixed costs such as
+                            bills, subscriptions, and utilities.
+
+                        <p style="margin: 0;"> <b>Rent</b>: Enter your total monthly rent payments.</p>
+                        <p style="margin: 0;"><b>Insurance</b>: Enter any costs related to your monthly insurances. It
+                            can be
+                            car insurance,
+                            renter or health insurance, etc.</p>
+                        <p style="margin: 0;"> <b>Property tax</b>: Include monthly property tax payments based on your
+                            area.
+                        </p>
+                        <p style="margin: 0;"><b>Electricity</b> : Consider how much you pay for electricity every
+                            month.</p>
+                        <p style="margin: 0;"><b>Gas</b>: Enter monthly costs for gas in your home.</p>
+                        <p style="margin: 0;"><b>Water</b>: Include the cost of your monthly water bill.</p>
+
+                        <p style="margin: 0;"><b>Internet service</b>: Enter how much you pay for Wi-Fi or internet
+                            provider
+                            monthly.</p>
+
+                    </div>
+                    <div class="image"><img
+                            src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator/steps-block/2/pic-features-1@2x.png"
+                            alt=""></div>
+                </div>
+                <div class="slider_item">
+                    <div class="content">
+                        <h1>Calculate monthly expenses</h1>
+                        <p>This section in our budget calculator goes for monthly expenses broken down by category.
+
+                        <p style="margin: 0;"> <b>Home</b>: Enter your total monthly spending related to home such as
+                            supplies, cleaning, furniture, etc.</p>
+                        <p style="margin: 0;"><b>Groceries</b>: Consider how much you spend on groceries every month. It
+                            also might be grocery bills or food subscriptions.</p>
+                        <p style="margin: 0;"> <b>Auto & Transport</b>: Enter your total monthly costs for day-to-day
+                            transportation. If you drive a car, include auto payments and gas expenses. If you commute
+                            by public transportation, include ticket pricing or pass subscriptions.
+                        </p>
+                        <p style="margin: 0;"> <b>Eating out</b>: Note how much money goes for restaurants and other
+                            places where you eat.</p>
+
+
+                    </div>
+                    <div class="image"><img
+                            src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator/steps-block/2/pic-features-1@2x.png"
+                            alt=""></div>
+                </div>
+                <div class="slider_item">
+                    <div class="content">
+                        <h1>Allocate money for debt payments</h1>
+                        <p>This section of the spending calculator covers all your debt payments, so you could easily
+                            pay them off and cover all necessities at the same time. Enter the sum of minimum payments
+                            you need to pay every month for all your debts. </p>
+
+                        <p style="margin: 0;"> <b>Credit cards</b>: Enter the minimum amount of money you must pay
+                            towards your credit cards debts.</p>
+                        <p style="margin: 0;"><b>Loans</b>: Include the minimum costs for any loan debts.</p>
+                        <p style="margin: 0;"> <b>Mortgage</b>: This section goes for the minimum mortgage payment that
+                            is enough to pay it off avoiding extra fees.
+                        </p>
+                        <p style="margin: 0;"> <b>Insurance</b>: Any insurance-related debts such as car or health
+                            insurance.</p>
+
+
+                    </div>
+                    <div class="image"><img
+                            src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator/steps-block/4/pic-features-1@2x.png"
+                            alt=""></div>
+                </div>
+                <div class="slider_item">
+                    <div class="content">
+                        <h1>Enter All Monthly Savings Contributions</h1>
+                        <p>This part is all about planning for your financial future. It involves the sum that you
+                            manage to save during a specific period of time. From emergency savings to retirement
+                            contributions, everything is included.</p>
+
+                        <p style="margin: 0;"> <b>Emergency Fund</b>: An emergency savings account is a stash of money
+                            set aside to cover any financial surprises life may throw your way. For instance, you may
+                            find out that you need a new fridge all of a sudden (or, at least, its repair). It is better
+                            to save a minimum of three-month living expenses. Enter your monthly contributions to your
+                            emergency savings fund here.</p>
+                    </div>
+                    <div class="image"><img
+                            src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator/steps-block/5/pic-features-1@2x.png"
+                            alt=""></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <footer class="section bg-footer">
+        <div class="container_futter">
+            <div class="row">
+                <div class="col-lg-3" id="calcu">
+                    <div class="">
+                        <h6 class="footer-heading  text-dark">Features</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">Bill payment tracker</a></li>
+                            <li><a href="">Lower your bills</a></li>
+                            <li><a href="">Budgeting</a></li>
+                            <li><a href="">Free antifraud</a></li>
+                            <li><a href="">Insights</a></li>
+                            <li><a href="">Debt Payoff plan</a></li>
+                            <li><a href="">Alerts</a></li>
+                            <li><a href="">Budget categorization</a></li>
+                            <li><a href="">Saving goals</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading  text-dark">How it works</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">What is packetGuard</a></li>
+                            <li><a href="">How to get started right</a></li>
+                            <li><a href="">Find Saving</a></li>
+                            <li><a href="">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2" id="calcu">
+                    <div class="">
+                        <h6 class="footer-heading  text-dark">Calculators</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">Budget Calculator</a></li>
+                            <li><a href="">Debt payoff Calculator</a></li>
+
+                        </ul>
+                        <h6 class="footer-heading  text-dark">Education</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">PocketGuard Blog</a></li>
+                            <li><a href="">Money management Short</a></li>
+                            <li><a href="">course</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading  text-dark">For business</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">For financial coaching</a></li>
+                            <li><a href="">For student and education</a></li>
+                            <li><a href="">White label</a></li>
+
+                        </ul>
+                        <h6 class="footer-heading  text-dark">Pricing</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a href="">Pricing</a></li>
+
+
+                        </ul>
+                        <div class="mt-5">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="#"><i
+                                            class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i
+                                            class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i
+                                            class="fab google footer-social-icon fa-google"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i
+                                            class="fab apple footer-social-icon fa-apple"></i></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <!-- <p class="footer-alt mb-0 f-14">2019 © Anup, All Rights Reserved</p> -->
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
+    <script src='https://jacoblett.github.io/bootstrap4-latest/bootstrap-4-latest.min.js'></script>
+    <script src="./frontend/Script/script.js"></script>
 </body>
 
 </html>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
+
 <script src="./frontend/Script/budgetcalc.js"></script>

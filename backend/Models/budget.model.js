@@ -10,4 +10,4 @@ const budgetcalcSchema = mongoose.Schema({
 const budgetcalcmodel = mongoose.model("budgetCalc", budgetcalcSchema);
 
 
-model.exports = budgetcalcmodel
+module.exports = budgetcalcmodel

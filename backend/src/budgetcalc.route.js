@@ -46,3 +46,5 @@ bdroute.patch("/", async (req, res) => {
     }
 
 })
+
+module.exports = bdroute
