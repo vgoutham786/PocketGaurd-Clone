@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
     res.send("hello...");
 });
 
-const { debtrout } = require("./src/debt_payoff");
+const {debtrout} = require("./src/debt_payoff");
 const bdroute = require("./src/budgetcalc.route");
 const userRoute = require("./src/user.route");
 app.use("/user", userRoute);
