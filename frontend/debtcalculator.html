@@ -1,149 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="debtcalculator.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/debtcalculator.css">
 </head>
+
 <body>
-    <div class="container" id="intro">
-        <div class="left-box">
-          <h2>Debt payoff calculator</h2>
-          <p>
-            PocketGuard debt payoff calculator will help you create the best plan you can stick to. Choose between “avalanche” or “snowball” strategies to see your progress faster or pay less in interest. You can download the payoff schedule for free.
-          </p>
-          <button>Sign up for PocketGuard</button>
+  <div class="container" id="intro">
+    <div class="left-box">
+      <h2>Debt payoff calculator</h2>
+      <p>
+        PocketGuard debt payoff calculator will help you create the best plan you can stick to. Choose between
+        “avalanche” or “snowball” strategies to see your progress faster or pay less in interest. You can download the
+        payoff schedule for free.
+      </p>
+      <button>Sign up for PocketGuard</button>
+    </div>
+    <div class="right-box">
+      <img src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/poster/pic-calculator-debt@2x.png"
+        alt="Image">
+    </div>
+  </div>
+
+
+  <section id="inputcontainer">
+    <div id="inputbox">
+      <div class="input1">
+        <div class="title">
+          <div>
+            <h3>debt name</h3>
+          </div>
+          <div>
+            <h3>current Balance</h3>
+          </div>
+          <div>
+            <h3>minpayment</h3>
+          </div>
+          <div>
+            <h3>APR</h3>
+          </div>
         </div>
-        <div class="right-box">
-          <img src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/poster/pic-calculator-debt@2x.png" alt="Image">
+        <div class="inputs">
+          <div><input type="text" id="debtname"></div>
+          <div><input type="number" id="curbalance"></div>
+          <div><input type="number" id="minpayment"></div>
+          <div><input type="number" id="Apr"></div>
+        </div>
+        <div id="createbtn">
+          <button>+</button>
+          <button>-</button>
+        </div>
+        <div>
         </div>
       </div>
-
-
-      <section id="inputcontainer">
-        <div id="inputbox">
-           <div class="input1">
-              <div class="title">
-                 <div><h3>debt name</h3></div>
-                 <div><h3>current Balance</h3></div>
-                 <div> <h3>minpayment</h3></div>
-                 <div><h3>APR</h3></div>
-              </div>
-              <div class="inputs">
-                 <div><input type="text" id="debtname"></div>
-                 <div><input type="number" id="curbalance"></div>
-                 <div><input type="number" id="minpayment"></div>
-                 <div><input type="number" id="Apr"></div>
-              </div>
-              <div id="createbtn">
-                 <button>+</button>
-                 <button>-</button>
-              </div>
-              <div>
-              </div>
-           </div>
-           <div class="input2">
-             <h1>Set up debt payoff budget</h1>
-              <div id="fund">
-                <div ><h3>Remaining Monthly Funds </h3> 
-                </div>
-                <div><input type="text"></div>
-               </div>
-              <h2>Payoff budget: <span id="minpay"></span></h2>
-           </div>
-           <div class="input3">
-                <button id="calculate">calculate</button>
-           </div>
-        </div>
-        <div id="outputbox">
-            <div class="output1">
-                <div class="outputhead">
-                   <h1>AVALANCHE</h1>
-                   <h3>The highest intrest rate</h3>
-                </div>
-                <div class="outputbbody">
-                    <h3>Total principal :-    <span id="totalp"></span></h3>
-                    <h3>Total interest :-     <span id="interest"></span></h3>
-                    <h3>Percentage paid in interest :-    <span id="Percentage"></span></h3>
-                    <h3>Months until debt free :-    <span id="months"></span></h3>
-                    <h3>Debt free date :-   <span id="date"></span></h3>
-                    <a href="#"><button>Show payoff Schedule</button></a>
-                </div>              
-            </div>
-            <div class="output2">
-                <h1>Get your debt reduction calculator</h1>
-                <h3>Budget effortlessly to get your financial freedom</h3>
-                <a href="#"><button>Sign Up for PocketGuard</button></a>
-            </div>
-        </div>
-
-      </section>
-
-      <!-- sliding section -->
-      <section class="slider_section">
-        <h1>How to use calculator step by step</h1>
-        <div class="tab_header">
-          <ul class="tab_container">
-            <li class="tab_item">Step One</li>
-            <li class="tab_item">Step Two</li>
-            <li class="tab_item">Step Three</li>
-            <li class="tab_item">Step four</li>
-            
-            <div class="moving_border" id="border"></div>
-          </ul>
-        </div>
-      
-        <div class="slider_container">
-          <div class="moving_container" id="moving_container">
-            <div class="slider_item">
-             <div class="content">
-                <h1>Choose your payoff strategy</h1>
-                <p>Once you understand the big picture, it’s time to add a strategy to the calculator. There are two main payoff strategies.</p>
-                <p>
-                    Snowball. Pay off the smallest loan first, while maintaining minimum monthly payments on all other credit cards. As each credit is paid off, the money that was used for the previous loans is “snowballed” and used to pay the next smallest debt. This process is repeated until all credits are gone. Choose this strategy if you need additional motivation by seeing all credit cards are paid. Still, this will not save as much money as the avalanche method.
-                </p>
-             </div>
-             <div class="image"><img src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator-debt/steps-block/3/pic-features-1@2x.png" alt=""></div>
-            </div>
-            <div class="slider_item">
-                <div class="content">
-                    <h1>Choose your payoff strategy</h1>
-                    <p>Once you understand the big picture, it’s time to add a strategy to the calculator. There are two main payoff strategies.</p>
-                    <p>
-                        Snowball. Pay off the smallest loan first, while maintaining minimum monthly payments on all other credit cards. As each credit is paid off, the money that was used for the previous loans is “snowballed” and used to pay the next smallest debt. This process is repeated until all credits are gone. Choose this strategy if you need additional motivation by seeing all credit cards are paid. Still, this will not save as much money as the avalanche method.
-                    </p>
-                 </div>
-                 <div class="image"><img src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator-debt/steps-block/2/pic-features-1@2x.png" alt=""></div>
-                </div>
-            </div>
-            <div class="slider_item">
-              <img src="https://cdn.pixabay.com/photo/2015/02/18/11/50/mountain-range-640617__340.jpg" alt="">
-            </div>
-            <div class="slider_item">
-              <img src="https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004__340.jpg" alt="">
-            </div>
+      <div class="input2">
+        <h1>Set up debt payoff budget</h1>
+        <div id="fund">
+          <div>
+            <h3>Remaining Monthly Funds </h3>
           </div>
-      
-          
-      
-      </section>
+          <div><input type="text"></div>
+        </div>
+        <h2>Payoff budget: <span id="minpay"></span></h2>
+      </div>
+      <div class="input3">
+        <button id="calculate">calculate</button>
+      </div>
+    </div>
+    <div id="outputbox">
+      <div class="output1">
+        <div class="outputhead">
+          <h1>AVALANCHE</h1>
+          <h3>The highest intrest rate</h3>
+        </div>
+        <div class="outputbbody">
+          <h3>Total principal :- <span id="totalp"></span></h3>
+          <h3>Total interest :- <span id="interest"></span></h3>
+          <h3>Percentage paid in interest :- <span id="Percentage"></span></h3>
+          <h3>Months until debt free :- <span id="months"></span></h3>
+          <h3>Debt free date :- <span id="date"></span></h3>
+          <a href="#"><button>Show payoff Schedule</button></a>
+        </div>
+      </div>
+      <div class="output2">
+        <h1>Get your debt reduction calculator</h1>
+        <h3>Budget effortlessly to get your financial freedom</h3>
+        <a href="#"><button>Sign Up for PocketGuard</button></a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- sliding section -->
+  <section class="slider_section">
+    <h1>How to use calculator step by step</h1>
+    <div class="tab_header">
+      <ul class="tab_container">
+        <li class="tab_item">Step One</li>
+        <li class="tab_item">Step Two</li>
+        <li class="tab_item">Step Three</li>
+        <li class="tab_item">Step four</li>
+
+        <div class="moving_border" id="border"></div>
+      </ul>
+    </div>
+
+    <div class="slider_container">
+      <div class="moving_container" id="moving_container">
+        <div class="slider_item">
+          <div class="content">
+            <h1>Choose your payoff strategy</h1>
+            <p>Once you understand the big picture, it’s time to add a strategy to the calculator. There are two main
+              payoff strategies.</p>
+            <p>
+              Snowball. Pay off the smallest loan first, while maintaining minimum monthly payments on all other credit
+              cards. As each credit is paid off, the money that was used for the previous loans is “snowballed” and used
+              to pay the next smallest debt. This process is repeated until all credits are gone. Choose this strategy
+              if you need additional motivation by seeing all credit cards are paid. Still, this will not save as much
+              money as the avalanche method.
+            </p>
+          </div>
+          <div class="image"><img
+              src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator-debt/steps-block/3/pic-features-1@2x.png"
+              alt=""></div>
+        </div>
+        <div class="slider_item">
+          <div class="content">
+            <h1>Choose your payoff strategy</h1>
+            <p>Once you understand the big picture, it’s time to add a strategy to the calculator. There are two main
+              payoff strategies.</p>
+            <p>
+              Snowball. Pay off the smallest loan first, while maintaining minimum monthly payments on all other credit
+              cards. As each credit is paid off, the money that was used for the previous loans is “snowballed” and used
+              to pay the next smallest debt. This process is repeated until all credits are gone. Choose this strategy
+              if you need additional motivation by seeing all credit cards are paid. Still, this will not save as much
+              money as the avalanche method.
+            </p>
+          </div>
+          <div class="image"><img
+              src="https://pocketguard.com/wp-content/themes/pocket-guard/assets/images/calculator-debt/steps-block/2/pic-features-1@2x.png"
+              alt=""></div>
+        </div>
+      </div>
+      <div class="slider_item">
+        <img src="https://cdn.pixabay.com/photo/2015/02/18/11/50/mountain-range-640617__340.jpg" alt="">
+      </div>
+      <div class="slider_item">
+        <img src="https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004__340.jpg" alt="">
+      </div>
+    </div>
+
+
+
+  </section>
 </body>
+
 </html>
 <script>
 
-const tab_item = document.querySelectorAll(".tab_item");
-const border = document.getElementById("border");
-const moving_container = document.getElementById("moving_container");
-const text_moving_wrapper = document.getElementById("text_moving_wrapper");
+  const tab_item = document.querySelectorAll(".tab_item");
+  const border = document.getElementById("border");
+  const moving_container = document.getElementById("moving_container");
+  const text_moving_wrapper = document.getElementById("text_moving_wrapper");
 
-for (let i = 0; i < tab_item.length; i++) {
-  tab_item[i].addEventListener("click", () => {
-    border.style.transform = `translateX(${100 * i}%)`;
-    moving_container.style.transform = `translateY(-${100 * i}%)`;
-    // text_moving_wrapper.style.transform = `translateY(-${100 * i}%)`;
-  });
-}
+  for (let i = 0; i < tab_item.length; i++) {
+    tab_item[i].addEventListener("click", () => {
+      border.style.transform = `translateX(${100 * i}%)`;
+      moving_container.style.transform = `translateY(-${100 * i}%)`;
+      // text_moving_wrapper.style.transform = `translateY(-${100 * i}%)`;
+    });
+  }
 
 </script>
-<script src="debtcalculator.js"></script>
+<script src="./Script/debtcalculator.js"></script>
