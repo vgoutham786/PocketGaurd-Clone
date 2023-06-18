@@ -11,9 +11,11 @@ app.get("/", (req, res) => {
 
 const { debtrout } = require("./src/debt_payoff");
 const bdroute = require("./src/budgetcalc.route");
+const userRoute = require("./src/user.route");
+app.use("/user", userRoute);
 app.use("/debtcal", debtrout);
 
-app.use("/budcal", bdroute)
+app.use("/bugcal", bdroute)
 
 const port = process.env.PORT || 3000;
 

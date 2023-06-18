@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+#main {
+    width: 20%;
+    margin: auto;
+}
+
+form {
+    margin-top: 70px;
+}
+
+form input {
+    display: block;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+    color: black;
+
+    padding: 1% 5% 1% 5%;
+    text-align: center;
+    background-color: white;
+}
+
+#submit {
+    margin-top: 15px;
+    /* margin-left: 20px; */
+    background-color: orangered;
+    color: white;
+    padding: 5px 63px 5px 63px;
+
+}
+
+form p {
+    color: rgb(220, 20, 113);
+}

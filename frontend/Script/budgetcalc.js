@@ -7,7 +7,7 @@ const escinc = document.querySelectorAll(".escinc")
 const mexp = document.getElementById("mexp")
 const bal = document.getElementById("bal")
 const sav = document.getElementById("sav")
-
+let token = JSON.parse(localStorage.getItem("token"))
 console.log(escinc)
 let fields = ["income", "rent", "insurance", "property tax", "electricity", "gas", "water", "internet serviece", "cellphone", "subscription", "other", "home", "groceries", "auto & transport", "eating out", "entertainment", "health & medical", "personal care", "gift donation", "clothing", "education", "electronics & software", "insurance", "kids", "pet", "shopping", "sports & fitness", "travel", "credit card", "loan", "mortrage", "insurance debt", "savings"];
 
@@ -47,7 +47,7 @@ calc.addEventListener("click", () => {
     val[32] = +savings.value || 0;
     obj[fields[32]] = val[32]
     console.log(val);
-    // postData(obj)
+    postData(obj)
     // display()
     //document.getElementById("dummy").innerText = JSON.stringify(obj)
     console.log(obj)
@@ -100,28 +100,38 @@ getData()
 
 async function postData(obj) {
     try {
-        // let res = fetch("http://localhost:3000/bugcal/", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         // 'Content-Type': 'application/x-www-form-urlencoded',
-        //     },
-        //     body: JSON.stringify(obj),
-        // });
-        // let reply = res.json();
-        // console.log(reply)
+
+        let res = fetch("http://localhost:3000/bugcal/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify(obj),
+        });
+        let reply = res.json();
+        console.log(reply)
     } catch (error) {
         console.log(error)
     }
 }
 async function getData() {
     try {
-        // let res = fetch("http://localhost:3000/bugcal/");
+        // let res = await fetch("http://localhost:3000/bugcal/",{
+        //     method: "GET",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //         // 'Content-Type': 'application/x-www-form-urlencoded',
+        //         "Authorization": `Bearer ${token}`
+        //     }
+        // });
         // let val = await res.json();
+        // console.log(val)
         // let data = val.data;
         let data = null
         if (data) {
-            let ans = Objects.values(data);
+            let ans = Object.values(data);
             inc.value = ans[0];
             savings.value = ans[32]
             for (let i = 1; i <= 31; i++) {

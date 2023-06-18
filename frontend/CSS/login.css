@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+#main {
+    width: 20%;
+    margin: auto;
+    margin-top: 100px;
+    /* background-color: #676198; */
+
+}
+
+form input {
+    display: block;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+    color: black;
+
+    padding: 1% 5% 1% 5%;
+    text-align: center;
+    background-color: white;
+}
+
+#submit {
+    margin-top: 15px;
+    /* margin-left: 20px; */
+    background-color:rgb(14, 210, 145);
+    color: white;
+    padding: 5px 72px 5px 72px;
+
+}
+
+form p {
+    color: rgb(220, 20, 113);
+}
+
+footer {
+    margin-top: 200px;
+}
+
+#info {
+    background-color: black;
+    padding: 1% 7%;
+}
+
+#info p {
+    color: white;
+    font-family: sans-serif;
+    line-height: 22px;
+}

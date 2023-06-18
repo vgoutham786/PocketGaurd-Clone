@@ -2,12 +2,17 @@ const express = require("express");
 
 const bdroute = express.Router();
 const budgetcalcmodel = require("../Models/budget.model")
+const {auth}=require("../middleware/auth.middleware")
 
-bdroute.get("/", async (req, res) => {
+var cors = require('cors')
+bdroute.use(cors())
+bdroute.get("/", auth,async (req, res) => {
 
     const userId = req.body.userId;
     try {
-        const data = budgetcalcmodel.findOne({ userId: userId });
+        console.log(userId)
+        const data = await budgetcalcmodel.findOne({ userId: userId });
+        console.log(data)
         if (data) {
             res.send({ data: data })
         } else {
@@ -19,9 +24,10 @@ bdroute.get("/", async (req, res) => {
 
 })
 
-bdroute.post("/", async (req, res) => {
-    const obj = req.body.obj
-    obj.userId = req.body.userId
+bdroute.post("/",auth, async (req, res) => {
+    console.log(req.body)
+    const obj = req.body
+    //obj.userId = req.body.userId
     try {
         await budgetcalcmodel.insertMany([obj]);
         res.send({ msg: "data saved" })

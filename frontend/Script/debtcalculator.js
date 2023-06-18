@@ -26,7 +26,7 @@ document.getElementById("calculate").addEventListener("click", function () {
   };
 
   // Send a POST request to the API endpoint
-  fetch("http://localhost:9000/debtcal/calculate", {
+  fetch("http://localhost:3000/debtcal/calculate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
