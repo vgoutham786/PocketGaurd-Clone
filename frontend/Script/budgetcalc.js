@@ -15,21 +15,21 @@ let fields = ["income", "rent", "insurance", "property tax", "electricity", "gas
 inc.addEventListener("keypress", () => {
     myRange.value = inc.value
     display()
-    total()
+    //total()
 })
 
 myRange.addEventListener("change", () => {
     inc.value = myRange.value
     display()
-    total()
+    //total()
 })
 savings.addEventListener("keypress", () => {
-    myRange1.value = inc.value
-    total()
+    myRange1.value = savings.value
+    //total()
 })
 
 myRange1.addEventListener("change", () => {
-    savings.value = myRange.value
+    savings.value = myRange1.value
 })
 
 let val = [];
@@ -47,8 +47,8 @@ calc.addEventListener("click", () => {
     val[32] = +savings.value || 0;
     obj[fields[32]] = val[32]
     console.log(val);
-    postData(obj)
-    display()
+    // postData(obj)
+    // display()
     //document.getElementById("dummy").innerText = JSON.stringify(obj)
     console.log(obj)
 
@@ -81,7 +81,7 @@ function total() {
     sav.innerHTML = ``
     bal.innerHTML = ``
     mexp.innerText = (bills + budget + debt) || 0;
-    sav.innerText = +savings.value || 0;
+    sav.innerText = savings.value || 0;
     bal.innerText = sum || 0
     piechart(+inc.value, bills, budget, debt, +savings.value)
     return sum
@@ -151,9 +151,7 @@ function piechart(i, b, bd, d, s) {
     // var cont = document.querySelector(".container");
     // cont.innerText = ``
     var ctx = document.getElementById("myChart");
-    
-   
-    ctx.innerHTML = ``
+    //ctx.innerHTML = ``
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {

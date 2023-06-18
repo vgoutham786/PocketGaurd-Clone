@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgetbooster</title>
-    <link rel="stylesheet" href="./frontend/styles/budgetcalculator.css">
+    <link rel="icon" href="./logos/fevicon.png">
+    <link rel="stylesheet" href="./CSS/budgetcalculator.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./frontend/CSS/style.css">
-    <link rel="stylesheet" href="./frontend/CSS/index.css">
-    <link rel="stylesheet" href="./frontend/CSS/guide.css">
-    <link rel="stylesheet" href="./frontend/CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/guide.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
 
 </head>
 
@@ -18,7 +19,7 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-light">
 
-        <a class="navbar-brand" href="#"><img class="logo_img" src="./frontend/CSS/logo.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img class="logo_img" src="./CSS/logo.png" alt=""></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +114,8 @@
                                                 Calculator</a>
 
 
-                                            <a class="nav-link text-dark" href="#">Debt payoff Calculator</a>
+                                            <a class="nav-link text-dark" href="./debtcalculator.html">Debt payoff
+                                                Calculator</a>
 
 
 
@@ -378,36 +380,38 @@
             </div>
             <button id="calc">calculate</button>
         </div>
-        <div id="pie">
-            <h2>In my pocket <span class="escinc"></span></h2>
-            <div class="container">
+        <div>
+            <div id="pie">
+                <h2 style="background-color: #475d66;padding: 2%; color: white;">In my pocket: $<span
+                        class="escinc"></span>
+                </h2>
+                <div class="container">
 
 
-                <div>
-                    <canvas id="myChart"></canvas>
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </div>
-            </div>
-
-            <p>Monthly Budget Breakdown</p>
-            <div>
-
-            </div>
-            <div>
-                <div class="split">
-                    <p>Total monthly income</p>
-                    <span class="escinc">$</span>
-                </div>
-                <div class="split">
-                    <p>Total monthly expenses</p>
-                    <span id="mexp">$</span>
-                </div>
-                <div class="split">
-                    <p>Total monthly savings</p>
-                    <span id="sav">$</span>
-                </div>
-                <div class="split">
-                    <p>In my pocket</p>
-                    <span id="bal">$</span>
+                <div style="padding: 3%; background-color: #ddfff4;">
+                    <h3 style="margin: 20px 0px;">Monthly Budget Breakdown</h3>
+                    <div>
+                        <div class="split">
+                            <p>Total monthly income</p>
+                            <span class="escinc">$</span>
+                        </div>
+                        <div class="split">
+                            <p>Total monthly expenses</p>
+                            <span id="mexp">$</span>
+                        </div>
+                        <div class="split">
+                            <p>Total monthly savings</p>
+                            <span id="sav">$</span>
+                        </div>
+                        <div class="split">
+                            <p>In my pocket</p>
+                            <span id="bal">$</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -626,10 +630,10 @@
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
     <script src='https://jacoblett.github.io/bootstrap4-latest/bootstrap-4-latest.min.js'></script>
-    <script src="./frontend/Script/script.js"></script>
+    <script src="./Script/script.js"></script>
 </body>
 
 </html>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
 
-<script src="./frontend/Script/budgetcalc.js"></script>
+<script src="./Script/budgetcalc.js"></script>

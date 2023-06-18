@@ -7,7 +7,7 @@ body {
 
 #topdiv {
     display: flex;
-    width: 60%;
+    width: 70%;
     margin: auto;
     margin-top: 3%;
     background-color: #e3ebf0;
@@ -26,7 +26,7 @@ body {
 
 #topdiv button {
     padding: 3%;
-    margin: 20px;
+    margin: 5px;
     font-size: 16px;
     border-radius: 6px;
     font-weight: 600;
@@ -118,6 +118,7 @@ body {
     display: flex;
     /* border: 1px solid red; */
     justify-content: space-between;
+
 }
 
 #divide>div {
@@ -127,10 +128,16 @@ body {
 
 
 .container {
-    width: 50%;
+    width: 20%;
     margin: 15px auto;
 }
 
+#pie {
+    padding: 2%;
+    border: 2px solid black;
+    /* width: 130%; */
+    margin: 0 2%
+}
 
 /* sliding section  */
 
