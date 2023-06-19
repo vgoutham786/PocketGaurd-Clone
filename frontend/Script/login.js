@@ -37,7 +37,12 @@ async function login(obj) {
             let token = data.token;
             localStorage.setItem("token", JSON.stringify(token))
             alert("User Login Successfull");
-            location.replace("index.html")
+            if (data.role == "admin") {
+                location.replace("admin.html")
+            } else {
+                location.replace("index.html")
+            }
+
         } else {
             alert("Wrong credentials")
         }

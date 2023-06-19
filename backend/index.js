@@ -20,7 +20,7 @@ app.use("/debtcal", debtrout);
 
 app.use("/bugcal", bdroute)
 
-const port = process.env.PORT || 3000;
+const port = +process.env.PORT || 3000;
 
 app.listen(port, async () => {
     try {
