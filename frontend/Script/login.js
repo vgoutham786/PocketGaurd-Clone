@@ -23,7 +23,7 @@ function log(email, password) {
 
 async function login(obj) {
     try {
-        let res = await fetch("http://localhost:3000/user/login", {
+        let res = await fetch("https://magnificent-bandanna-moth.cyclic.app/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

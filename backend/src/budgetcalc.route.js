@@ -10,9 +10,9 @@ bdroute.get("/", auth,async (req, res) => {
 
     const userId = req.body.userId;
     try {
-        console.log(userId)
+       // console.log(userId)
         const data = await budgetcalcmodel.findOne({ userId: userId });
-        console.log(data)
+       // console.log(data)
         if (data) {
             res.send({ data: data })
         } else {
@@ -25,7 +25,7 @@ bdroute.get("/", auth,async (req, res) => {
 })
 
 bdroute.post("/",auth, async (req, res) => {
-    console.log(req.body)
+   // console.log(req.body)
     const obj = req.body
     //obj.userId = req.body.userId
     try {

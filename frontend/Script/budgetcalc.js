@@ -101,7 +101,7 @@ getData()
 async function postData(obj) {
     try {
 
-        let res = fetch("http://localhost:3000/bugcal/", {
+        let res = fetch("https://magnificent-bandanna-moth.cyclic.app/bugcal/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -118,7 +118,7 @@ async function postData(obj) {
 }
 async function getData() {
     try {
-        // let res = await fetch("http://localhost:3000/bugcal/",{
+        // let res = await fetch("https://magnificent-bandanna-moth.cyclic.app/bugcal/",{
         //     method: "GET",
         //     headers: {
         //         "Content-Type": "application/json",

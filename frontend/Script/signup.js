@@ -34,7 +34,7 @@ function reg(name, email, age, contact, password) {
 
 async function register(obj) {
     try {
-        let res = await fetch("http://localhost:3000/user/register", {
+        let res = await fetch("https://magnificent-bandanna-moth.cyclic.app/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

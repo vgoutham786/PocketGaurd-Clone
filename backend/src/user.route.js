@@ -9,7 +9,7 @@ userRoute.post("/register", async (req, res) => {
     let email = req.body.email;
     req.body.time=new Date().getTime()
     // console.log(req.body)
-    console.log(data)
+   // console.log(data)
     try {
         let userr = await userModel.findOne({ email: email });
         //console.log(userr)

@@ -11,7 +11,7 @@ debtrout.post('/calculate', (req, res) => {
   const data = req.body;
 
   const debts = data.debts;
-  console.log(debts)
+ // console.log(debts)
   let totalPrincipal = 0;
   let totalInterest = 0;
   let totalPaid = 0;
