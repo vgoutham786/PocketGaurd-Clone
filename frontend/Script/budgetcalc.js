@@ -101,7 +101,7 @@ getData()
 async function postData(obj) {
     try {
 
-        let res = fetch("https://magnificent-bandanna-moth.cyclic.app/bugcal/", {
+        let res = fetch("https://budget-boost.onrender.com/bugcal/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -118,7 +118,7 @@ async function postData(obj) {
 }
 async function getData() {
     try {
-        // let res = await fetch("https://magnificent-bandanna-moth.cyclic.app/bugcal/",{
+        // let res = await fetch("https://budget-boost.onrender.com/bugcal/",{
         //     method: "GET",
         //     headers: {
         //         "Content-Type": "application/json",

@@ -23,7 +23,7 @@ const bodyarray=document.getElementsByClassName("delete")
 
 async function display(){
           try {
-            let data= await fetch("https://magnificent-bandanna-moth.cyclic.app/admin")
+            let data= await fetch("https://budget-boost.onrender.com/admin")
                   data=await data.json()
                   totalCustomer.innerHTML=data.count-1
                   console.log(data)
@@ -79,7 +79,7 @@ function deleteUser(array){
 
 async function deletefetch(deleteID){
     try {
-           let data= await fetch(`https://magnificent-bandanna-moth.cyclic.app/user/delete/${deleteID}`,{
+           let data= await fetch(`https://budget-boost.onrender.com/user/delete/${deleteID}`,{
             method:"DELETE"
            })
            data= await data.json()

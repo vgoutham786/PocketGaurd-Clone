@@ -11,15 +11,20 @@ form.addEventListener("submit", (e) => {
     let contact = form.phnum.value;
     let password = form.password.value;
     let cp = form.cp.value
-
-    if (cp == password) {
-        let obj = new reg(name, email, age, contact, password);
-        console.log(obj)
-        register(obj)
-    } else {
-        alert("Password Missmatch. Please Enter Correct Password")
-
+    
+    if(name&&email&&age&&contact&&password&&cp){
+        if (cp == password) {
+            let obj = new reg(name, email, age, contact, password);
+            console.log(obj)
+            register(obj)
+        } else {
+            alert("Password Missmatch. Please Enter Correct Password")
+    
+        }
+    }else{
+        alert("Please fill all the details")
     }
+    
 })
 
 function reg(name, email, age, contact, password) {
@@ -34,7 +39,7 @@ function reg(name, email, age, contact, password) {
 
 async function register(obj) {
     try {
-        let res = await fetch("https://magnificent-bandanna-moth.cyclic.app/user/register", {
+        let res = await fetch("https://budget-boost.onrender.com/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43,8 +48,13 @@ async function register(obj) {
         })
 
         let data = await res.json();
-
-        alert("User Registered Successfully")
+        //console.log(data)
+        alert(data.msg)
+        if(data.msg!="user already exists!!"){
+//alert("User Registered Successfully")
+        location.href="./login.html"
+        }
+        
     } catch (error) {
         console.log(error)
     }

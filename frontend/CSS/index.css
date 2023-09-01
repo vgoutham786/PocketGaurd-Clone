@@ -137,3 +137,156 @@
     border-radius: 15px;
     font-weight: bold;
  }
+
+ /* Default Styles */
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+   .Take_full_control {
+       flex-direction: column;
+   }
+
+   .button_box {
+       width: 100%;
+       margin-left: 0;
+   }
+
+   .mobile_image {
+       margin-left: 0;
+       width: 100%;
+   }
+
+   /* Adjust other styles as needed */
+   .signup_btn1 {
+       margin-left: 0;
+       margin-top: 5%;
+       text-align: center;
+   }
+
+   .scanToinstall {
+       margin-left: 0;
+       text-align: center;
+       margin-top: 5%;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .app_appStore1,
+   .app_playStore1,
+   .app_Barcode_Store1 {
+       width: 180px;
+       margin: auto;
+       margin-top: 5%;
+   }
+
+   /* Adjust other styles as needed */
+   .image_ss>img {
+       width: 100%;
+   }
+
+   /* Adjust other styles as needed */
+   .video_section {
+       flex-direction: column;
+   }
+
+   .h1_and_p_tag {
+       text-align: center;
+       margin: 5% auto;
+   }
+
+   /* Adjust other styles as needed */
+   .GetpocketGuard_button {
+       margin: 5% auto;
+   }
+
+   /* Adjust other styles as needed */
+   .bg-footer {
+       padding: 30px 0;
+   }
+}
+
+/* Add media query for even smaller screens if needed */
+@media screen and (max-width: 576px) {
+   .Take_full_control {
+       flex-direction: column;
+   }
+
+   .button_box {
+       width: 100%;
+       margin-left: 0;
+   }
+
+   .mobile_image {
+       margin-left: 0;
+       width: 100%;
+   }
+
+   .take_full_h1_tag {
+       font-size: 4vh;
+   }
+
+   .take_full_p_tag {
+       font-size: 14px;
+   }
+
+   .signup_btn1 {
+       margin-left: 0;
+       margin-top: 5%;
+       text-align: center;
+   }
+
+   .scanToinstall {
+       margin-left: 0;
+       text-align: center;
+       margin-top: 5%;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .app_appStore1,
+   .app_playStore1,
+   .app_Barcode_Store1 {
+       width: 150px;
+       margin: auto;
+       margin-top: 5%;
+   }
+
+   .image_ss>img {
+       width: 100%;
+   }
+
+   .personal_finance_h3 {
+       font-size: 32px;
+   }
+
+   .personal_finance_p {
+       font-size: 20px;
+   }
+
+   .video_section {
+       flex-direction: column;
+   }
+
+   .Know_whath1 {
+       font-size: 26px;
+   }
+
+   .Know_whatp {
+       font-size: 16px;
+   }
+
+   .GetpocketGuardh1 {
+       font-size: 28px;
+       margin-top: 10%;
+   }
+
+   .GetpocketGuard_p {
+       font-size: 18px;
+   }
+
+   .GetpocketGuard_button {
+       margin: 5% auto;
+       font-size: 16px;
+   }
+   
+}

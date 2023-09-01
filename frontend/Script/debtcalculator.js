@@ -26,7 +26,7 @@ document.getElementById("calculate").addEventListener("click", function () {
   };
 
   // Send a POST request to the API endpoint
-  fetch("https://magnificent-bandanna-moth.cyclic.app/debtcal/calculate", {
+  fetch("https://budget-boost.onrender.com/debtcal/calculate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
