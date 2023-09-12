@@ -1,91 +1,193 @@
 .navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0;
-    border: 1px solid transparent;
-    border-radius: 0;
-    /* background-color: #cc5454 !important; */
-    color: #000 !important;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  /* background-color: #cc5454 !important; */
+  color: #000 !important;
+  text-align: center;
 }
-#a_fix{
- 
+
+#a_fix {
+
   width: 160px;
-  
+
 
 }
- #border_red{
+
+#border_red {
   font-size: 9px;
-   /* border: 3px solid rgb(20, 222, 128); */
-  width: 150px; 
- 
- }
-.navbar .dropdown-menu div[class*="col"] {
-   margin-bottom:1rem;
+  /* border: 3px solid rgb(20, 222, 128); */
+  width: 150px;
+
 }
 
- /* ----------logo----------- */
- .logo_img{
+.navbar .dropdown-menu div[class*="col"] {
+  margin-bottom: 1rem;
+}
+
+/* ----------logo----------- */
+.logo_img {
   width: 150px;
   height: 80px;
- }
+}
 
 /* #font_size{
   font-size: 14px;
 } */
 
 .navbar .dropdown-menu {
-  border:none;
+  border: none;
   /* background-color: #e08888 !important; */
 }
 
 /* breakpoint and up - mega dropdown styles */
 @media screen and (min-width: 992px) {
-  
-  /* remove the padding from the navbar so the dropdown hover state is not broken */
-.navbar {
-  padding-top:0px;
-  padding-bottom:0px;
-}
 
-/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
-/* .navbar .nav-item {
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+  /* .navbar .nav-item {
   padding:.5rem .5rem;
   margin:0 .25rem;
 } */
 
-/* makes the dropdown full width  */
- 
+  /* makes the dropdown full width  */
 
-.navbar .dropdown-menu {
-  /* border: 1px solid red; */
-  width:170%;
-  left:0;
-  right:0;
- /* height of nav-item  */
-  top:35px;
-  
-  display:block;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
-  
-}
-  
- 
 
-  
+  .navbar .dropdown-menu {
+    /* border: 1px solid red; */
+    width: 170%;
+    left: 0;
+    right: 0;
+    /* height of nav-item  */
+    top: 35px;
+
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+
+  }
+
+
+
+
   /* shows the dropdown menu on hover */
-.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
-  display:block;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s, opacity 0.3s linear;
-}
-  
+  .navbar .dropdown:hover .dropdown-menu,
+  .navbar .dropdown .dropdown-menu:hover {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+
   .navbar .dropdown-menu {
     /* border: 2px solid red; */
     /* border: 1px solid rgba(0,0,0,.15); */
     background-color: #fff;
   }
 
+}
+
+/* Default styles for larger screens (desktop) */
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #000 !important;
+}
+
+#a_fix {
+  width: 160px;
+}
+
+#border_red {
+  font-size: 9px;
+  width: 150px;
+}
+
+.navbar .dropdown-menu div[class*="col"] {
+  margin-bottom: 1rem;
+}
+
+.logo_img {
+  width: 150px;
+  height: 80px;
+}
+
+.navbar .dropdown-menu {
+  border: none;
+  /* background-color: red; */
+  text-align: center;
+}
+
+/* Responsive styles for screens smaller than 576px (e.g., mobile phones) */
+@media (max-width: 575px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    margin-right: 15px;
+    /* color: red; */
+    /* border: 1px solid red; */
+    background-color: #000;
+  }
+
+  .navbar-brand {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .btn-outline-dark {
+    margin-top: 10px;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}
+
+/* Responsive styles for screens between 576px and 991px (e.g., tablets) */
+@media (min-width: 576px) and (max-width: 991px) {
+  .nav-item {
+    margin-bottom: 15px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .btn-outline-dark {
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
 }

@@ -83,7 +83,7 @@ function total() {
     mexp.innerText = (bills + budget + debt) || 0;
     sav.innerText = savings.value || 0;
     bal.innerText = sum || 0
-    piechart(+inc.value, bills, budget, debt, +savings.value)
+     piechart(+inc.value, bills, budget, debt, +savings.value)
     return sum
 }
 function display() {
@@ -156,6 +156,68 @@ async function getData() {
 
 }
 
+// Include the Chart.js library in your HTML file if you haven't already:
+ 
+
+function createRadarChart(income, bills, budgets, debt, savings) {
+    var ctx = document.getElementById("myChart").getContext("2d");
+
+    var myChart = new Chart(ctx, {
+        type: 'radar', // Set the chart type to 'radar' for a radar chart
+        data: {
+            labels: ["Income", "Bills", "Budgets", "Debt", "Savings"],
+            datasets: [{
+                label: 'Amount',
+                data: [income, bills, budgets, debt, savings],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Fill color
+                borderColor: 'rgba(75, 192, 192, 1)', // Border color
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scale: {
+                angleLines: {
+                    display: false // Hide the lines radiating from the center
+                },
+                ticks: {
+                    beginAtZero: true,
+                    max: Math.max(income, bills, budgets, debt, savings) + 500 // Adjust the maximum scale value
+                }
+            }
+        }
+    });
+}
+
+// Call the createRadarChart function with your data
+//createRadarChart(5000, 2000, 3000, 1000, 1500); // Replace these values with your actual data
+// Initialize the pie chart
+var ctx = document.getElementById("myChart").getContext("2d");
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["In my pocket", "Bills", "Budgets", "Debt", "Savings"],
+        datasets: [{
+            backgroundColor: [
+                "#2ecc71",
+                "#3498db",
+                "#95a5a6",
+                "#9b59b6",
+                "#f1c40f",
+                "#e74c3c",
+                "#34495e"
+            ],
+            data: [0, 0, 0, 0, 0]
+        }]
+    }
+});
+
+function updatePieChart(income, bills, budgets, debt, savings) {
+    myChart.data.datasets[0].data = [income, bills, budgets, debt, savings];
+    myChart.update(); // Update the chart with new data
+}
+
+// Call the updatePieChart function with your data when needed
+// updatePieChart(5000, 2000, 3000, 1000, 1500);
 
 function piechart(i, b, bd, d, s) {
     // var cont = document.querySelector(".container");

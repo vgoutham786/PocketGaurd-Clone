@@ -444,3 +444,98 @@ padding-right: 40px;
   color: white;
   font-weight: 700;
 }
+
+/* Add these styles at the end of your CSS */
+
+/* Responsive styles for slider section */
+@media screen and (max-width: 768px) {
+    .slider_section h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .tab_header {
+        padding: 1rem;
+    }
+
+    .tab_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .slider_section li {
+        font-size: 16px;
+    }
+
+    .slider_item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .slider_item .content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .slider_item .content h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .slider_item .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .slider_item .image {
+        width: 80%;
+    }
+
+    .center_tab_preview {
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: 40%;
+    }
+}
+
+/* Additional responsive styles for even smaller screens */
+@media screen and (max-width: 576px) {
+    .slider_section h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .tab_header {
+        padding: 0.5rem;
+    }
+
+    .slider_item {
+        padding: 10px;
+    }
+
+    .slider_item .content h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .slider_item .content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .slider_item .image {
+        width: 90%;
+    }
+
+    .center_tab_preview {
+        width: 95%;
+        height: auto;
+        left: 2.5%;
+        top: 30%;
+    }
+}
+
+

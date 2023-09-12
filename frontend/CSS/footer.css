@@ -2,6 +2,7 @@
     /* background-color: #33383c; */
     margin-top: 5%;
     padding: 50px 0 30px;
+    /* display: flex; */
 }
 .footer-heading {
     letter-spacing: 2px;
@@ -83,4 +84,61 @@
 .text-dark{
     font-size: larger;
     font-weight: bolder;
+}
+
+/* Default styles for larger screens (desktop) */
+.container_futter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.col-lg-3 {
+    flex-basis: calc(25% - 15px); /* Adjust column width as needed */
+    margin-bottom: 20px;
+}
+
+#calcu {
+    margin-left: 4%;
+}
+
+/* Responsive styles for tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container_futter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* flex-wrap: nowrap; */
+    }
+    .col-lg-3 {
+        flex-basis: calc(33.33% - 15px); /* Adjust column width for tablets */
+    }
+    .col-lg-3 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #calcu {
+        margin-left: 0;
+    }
+}
+
+/* Responsive styles for mobile devices (less than 768px) */
+@media (max-width: 767px) {
+    .container_futter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-lg-3 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #calcu {
+        margin-left: 0;
+    }
 }
